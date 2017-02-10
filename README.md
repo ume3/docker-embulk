@@ -1,4 +1,6 @@
 # docker-embulk
 
 ## start
-`docker build db`
+```
+docker build batch
+```
