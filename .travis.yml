@@ -1,7 +1,24 @@
 sudo: required
 
-notifications:
-    email: false
+language: ruby
+install: bundle install --deployment
+cache:
+  directories:
+  - vendor/bundle
 
 services:
   - docker
+
+notifications:
+    email: false
+
+env:
+  - TARGET_CONTAINER_ID=test
+
+before_install:
+  - docker build batch -t batch001
+  - docker run -d --name ${TARGET_CONTAINER_ID} batch001
+
+script:
+  - bundle exec rake spec
+
