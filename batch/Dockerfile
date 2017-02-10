@@ -6,3 +6,4 @@ RUN chmod +x ~/.embulk/bin/embulk
 RUN echo 'export PATH="$HOME/.embulk/bin:$PATH"' >> ~/.bashrc
 RUN source ~/.bashrc
 
+CMD ["/sbin/init"]

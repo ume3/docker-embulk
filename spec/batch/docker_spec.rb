@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe package('embulk') do
-  it { should be_installed }
-end      
+describe command('cat /root/.bashrc') do
+  its(:stdout) { should match(%r{export PATH="\$HOME/.embulk/bin:\$PATH"}) }
+end

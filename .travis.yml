@@ -20,5 +20,5 @@ before_install:
   - docker run -d --name ${TARGET_CONTAINER_ID} batch001
 
 script:
-  - bundle exec rake spec
+  - bundle exec rspec
 
