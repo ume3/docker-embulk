@@ -2,5 +2,5 @@
 
 ## start
 ```
-docker build batch
+docker compose up -d
 ```
