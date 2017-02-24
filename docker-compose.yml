@@ -4,3 +4,5 @@ services:
     build: batch
     container_name: batch
     restart: always
+    volumes:
+      - ./batch/scripts:/var/tmp/scripts
