@@ -5,5 +5,6 @@ RUN curl --create-dirs -o ~/.embulk/bin/embulk -L "http://dl.embulk.org/embulk-l
 RUN chmod +x ~/.embulk/bin/embulk
 RUN echo 'export PATH="$HOME/.embulk/bin:$PATH"' >> ~/.bashrc
 RUN source ~/.bashrc
+RUN embulk gem install embulk-output-mysql
 
 CMD ["/sbin/init"]
